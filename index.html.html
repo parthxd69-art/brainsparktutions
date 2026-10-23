@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brain Spark Tutions – Andesh Nagar, Lakhimpur Kheri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--paper:#f2f6fb;--card:#ffffff;--spark:#ffc533;--spark-ink:#14213d;--muted:#4a5878;--line:#d5deec;--accent:#2f5bea;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#eef2fb;--paper:#0e1630;--card:#16213f;--muted:#a9b6d4;--line:#2a3860;--accent:#8fb0ff}}
+:root[data-theme="dark"]{--ink:#eef2fb;--paper:#0e1630;--card:#16213f;--muted:#a9b6d4;--line:#2a3860;--accent:#8fb0ff}
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Hind,system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,sans-serif;line-height:1.08;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:9px}
+.logo i{width:30px;height:30px;background:var(--spark);clip-path:polygon(50% 0,62% 36%,100% 50%,62% 64%,50% 100%,38% 64%,0 50%,38% 36%)}
+nav a{margin-left:20px;text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 72px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,7.5vw,5.4rem);font-weight:800;letter-spacing:-.03em}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:34ch;margin:22px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--spark);color:var(--spark-ink);border-color:var(--spark)}
+.btn.main:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.alt:hover{background:var(--ink);color:var(--paper)}
+.spark{justify-self:center;width:min(100%,280px);aspect-ratio:1;background:var(--spark);clip-path:polygon(50% 0,60% 38%,100% 50%,60% 62%,50% 100%,40% 62%,0 50%,40% 38%);animation:pulse 3.6s ease-in-out 1}
+@keyframes pulse{0%{transform:scale(.4) rotate(-40deg);opacity:0}60%{transform:scale(1.08) rotate(6deg);opacity:1}100%{transform:scale(1) rotate(0)}}
+@media (prefers-reduced-motion:reduce){.spark{animation:none}html{scroll-behavior:auto}}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+.lead{color:var(--muted);max-width:56ch;margin:0 0 34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:1.25rem;margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:.98rem}
+.classes{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.classes li{background:var(--ink);color:var(--paper);padding:10px 20px;border-radius:999px;font-weight:600}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.owner{background:var(--spark);color:var(--spark-ink);border-radius:18px;padding:30px}
+.owner small{font-size:.95rem;font-weight:600}
+.owner h3{font-size:2rem;margin:6px 0 8px}
+.owner p{margin:0}
+.contact dl{margin:0;display:grid;gap:18px}
+.contact dt{font-weight:600;color:var(--muted);font-size:.95rem}
+.contact dd{margin:0;font-size:1.25rem;font-weight:500}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font-weight:600;cursor:pointer;font-size:1.05rem}
+.faq details p{margin:10px 0 0;color:var(--muted)}
+.form{display:grid;gap:14px;max-width:520px}
+.form label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
+.form input,.form select,.form textarea{font:inherit;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);width:100%}
+.form button{font:inherit;cursor:pointer;justify-self:start}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;border-left:4px solid var(--spark);padding:4px 0 4px 16px}
+.steps li:before{content:"Step "counter(s);display:block;font-weight:600;color:var(--muted);font-size:.9rem}
+.steps b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:#25d366;color:#08331a;font-weight:700;text-decoration:none;padding:13px 20px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:20}
+footer{background:var(--ink);color:var(--paper);padding:28px 0;text-align:center;font-size:.95rem}
+footer b{color:var(--spark)}
+@media (max-width:720px){.hero,.about{grid-template-columns:1fr}.spark{width:140px;justify-self:start;order:-1}nav a{margin-left:14px}.hero{padding-top:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#top"><i></i>Brain Spark</a>
+  <nav><a href="#subjects">Subjects</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <h1>Where learning finally clicks.</h1>
+      <p>Friendly, focused tuition classes in Andesh Nagar, Lakhimpur Kheri.</p>
+      <div class="btns">
+        <a class="btn main" href="tel:+917007946930">Call +91 70079 46930</a>
+        <a class="btn alt" href="https://wa.me/917007946930">WhatsApp us</a>
+      </div>
+    </div>
+    <div class="spark" role="img" aria-label="Spark"></div>
+  </div>
+
+  <section id="subjects">
+    <h2>What we teach</h2>
+    <p class="lead">Clear explanations, regular practice and doubt-solving in every class.</p>
+    <div class="grid">
+      <div class="card"><h3>Mathematics</h3><p>Concepts built step by step, then practised until they feel easy.</p></div>
+      <div class="card"><h3>Science</h3><p>Physics, Chemistry and Biology explained with simple examples.</p></div>
+      <div class="card"><h3>English</h3><p>Grammar, writing and reading confidence.</p></div>
+      <div class="card"><h3>Hindi &amp; Social Science</h3><p>Understand the chapter, not just memorise it.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Brain Spark</h2>
+    <div class="grid">
+      <div class="card"><h3>Small batches</h3><p>Every student gets personal attention.</p></div>
+      <div class="card"><h3>Doubt clearing</h3><p>Ask anything, anytime in class.</p></div>
+      <div class="card"><h3>Regular tests</h3><p>Weekly practice to track progress.</p></div>
+      <div class="card"><h3>Parent updates</h3><p>You stay informed about your child's growth.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How to get started</h2>
+    <ol class="steps">
+      <li><b>Get in touch</b><br>Call, WhatsApp or send the enquiry form below.</li>
+      <li><b>Talk to Amit Sir</b><br>Share your child's class and where they need help.</li>
+      <li><b>Join a batch</b><br>Start classes and see the difference.</li>
+    </ol>
+  </section>
+
+  <section id="about" class="about">
+    <div>
+      <h2>Run with care</h2>
+      <p class="lead">Brain Spark Tutions was started to help students understand their studies without fear. We believe every child has a spark; we help it shine.</p>
+      <ul class="classes" aria-label="Classes"><li>Class 6–8</li><li>Class 9–10</li><li>Class 11–12</li></ul>
+    </div>
+    <div class="owner">
+      <small>Owner &amp; Teacher</small>
+      <h3>Amit Jaiswal</h3>
+      <p>Guiding students of Lakhimpur Kheri toward confident learning.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Join a class</h2>
+    <p class="lead">Visit us or call to ask about batches and timings.</p>
+    <dl>
+      <div><dt>Address</dt><dd>Andesh Nagar, Lakhimpur Kheri</dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+917007946930">+91 70079 46930</a></dd></div>
+      <div><dt>Owner</dt><dd>Amit Jaiswal</dd></div>
+    </dl>
+    <p style="margin-top:24px"><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Andesh+Nagar+Lakhimpur+Kheri" target="_blank" rel="noopener">Open in Google Maps</a></p>
+  </section>
+
+  <section id="enquiry">
+    <h2>Send an enquiry</h2>
+    <p class="lead">Fill this in and it opens WhatsApp with your message ready to send.</p>
+    <form class="form" id="enq" onsubmit="return false">
+      <label>Student's name<input id="n" type="text" autocomplete="name" required></label>
+      <label>Class<select id="c"><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></label>
+      <label>Message (optional)<textarea id="m" rows="3" placeholder="Subjects, preferred timing..."></textarea></label>
+      <button class="btn main" id="go" type="button">Send on WhatsApp</button>
+    </form>
+  </section>
+
+  <section class="faq">
+    <h2>Questions parents ask</h2>
+    <details><summary>Which classes do you teach?</summary><p>We teach students from Class 6 to Class 12.</p></details>
+    <details><summary>How do I know the batch timings and fees?</summary><p>Call or WhatsApp +91 70079 46930 and we will share the current batches and fees.</p></details>
+    <details><summary>Where is the tuition located?</summary><p>Andesh Nagar, Lakhimpur Kheri. Use the Google Maps button above for directions.</p></details>
+    <details><summary>Can I meet the teacher before joining?</summary><p>Yes, you are welcome to visit and talk to Amit Jaiswal about your child's needs.</p></details>
+  </section>
+</main>
+</div>
+<a class="fab" href="https://wa.me/917007946930" aria-label="Chat on WhatsApp">WhatsApp</a>
+<footer>© Brain Spark Tutions · Website made by <b>Parth</b></footer>
+<script>
+document.getElementById('go').addEventListener('click',function(){
+ var n=document.getElementById('n').value.trim();
+ if(!n){document.getElementById('n').focus();return}
+ var t='Hello, I want to enquire about Brain Spark Tutions.\nStudent: '+n+'\nClass: '+document.getElementById('c').value;
+ var m=document.getElementById('m').value.trim();
+ if(m)t+='\nMessage: '+m;
+ window.open('https://wa.me/917007946930?text='+encodeURIComponent(t),'_blank');
+});
+</script>
+</body>
+</html>
